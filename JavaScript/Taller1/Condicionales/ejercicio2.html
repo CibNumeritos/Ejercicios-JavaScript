@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var topping = prompt('¿Qué topping quieres con tu helado?');
+        var price;
+        switch (topping) {
+            case 'sin topping': {
+                price = 1.90;
+            } break;
+            case 'oreo': {
+                price = 1;
+            } break;
+            case 'kitkat': {
+                price = 1.50;
+            } break;
+            case 'brownie': {
+                price = 0.75;
+            } break;
+            case 'lacasitos': {
+                price = 0.95;
+            } break;
+            default: {
+                price = 1.90;
+                topping = undefined;
+            } break;
+        };
+        if (!topping) {
+            console.log(`Tu helado sin topping, costará ${price.toFixed(2)}€`);
+        } else {
+            console.log(`Tu helado con topping de ${topping}, costará ${price.toFixed(2)}€`);
+        };
+    </script>
+</head>
+
+</html>

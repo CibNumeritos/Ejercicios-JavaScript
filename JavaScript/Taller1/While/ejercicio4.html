@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var numberAmountInput = prompt('Ingresa la cantidad de numeros que deseas ingresar.');
+        var numberAmount = Number(numberAmountInput);
+        var numberCount = 1;
+        var lessThanFifteenCount = 0, greaterThanFiftyCount = 0, betweenRangeAmount = 0;
+        do {
+            var numberInput = prompt(`Ingresa el numero ${numberCount}`);
+            number = Number(numberInput);
+            switch (true) {
+                case number < 15: {
+                    lessThanFifteenCount++
+                } break;
+                case number > 50: {
+                    greaterThanFiftyCount++
+                } break;
+                case number > 25 && number < 45: {
+                    betweenRangeAmount++;
+                } break;
+                default:
+                    break;
+            }
+            numberCount++
+        } while (numberCount <= numberAmount) {
+            console.log(`De los ${numberAmount} numeros ingresados:\n${lessThanFifteenCount} son menores que 15, ${greaterThanFiftyCount} son mayores que 50 y ${betweenRangeAmount} se encuentra(n) entre un rango de 25 y 45`);
+        };
+    </script>
+</head>
+
+</html>
