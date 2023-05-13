@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script>
-            var inputN = prompt('Ingresa el limite inferior N');
-            var inputM = prompt('Ingresa el limite superior M');
-            var N = Number(inputN), M = Number(inputM), summation = 0;
-            for (let i = N; i <= M; i++) {
-                if (i % 2 === 0) {
-                    console.log(`${i} es un numero par. Sumando al total...`);
-                    summation += i;
-                };
+
+<head>
+    <script>
+        var N = Number(prompt('Ingresa el limite inferior N')),
+            M = Number(prompt('Ingresa el limite superior M')),
+            summation = 0;
+        for (let i = N; i <= M; i++) {
+            if (i % 2 === 0) {
+                console.log(`${i} es un numero par. Sumando al total...`);
+                summation += i;
             };
-            console.log(summation);
-        </script>
-    </head>
+        };
+        console.log(summation);
+    </script>
+</head>
+
 </html>
