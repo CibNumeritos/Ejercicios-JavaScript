@@ -3,13 +3,11 @@
 
 <head>
     <script>
-        var numberAmountInput = prompt('Ingresa la cantidad de numeros que deseas ingresar.');
-        var numberAmount = Number(numberAmountInput);
+        var numberAmount = Number(prompt('Ingresa la cantidad de numeros que deseas ingresar.'));
         var numberCount = 1;
         var lessThanFifteenCount = 0, greaterThanFiftyCount = 0, betweenRangeAmount = 0;
         do {
-            var numberInput = prompt(`Ingresa el numero ${numberCount}`);
-            number = Number(numberInput);
+            var number = Number(prompt(`Ingresa el numero ${numberCount}`));
             switch (true) {
                 case number < 15: {
                     lessThanFifteenCount++
@@ -20,8 +18,6 @@
                 case number > 25 && number < 45: {
                     betweenRangeAmount++;
                 } break;
-                default:
-                    break;
             }
             numberCount++
         } while (numberCount <= numberAmount) {
