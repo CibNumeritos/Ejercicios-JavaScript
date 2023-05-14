@@ -3,16 +3,12 @@
 
 <head>
     <script>
-        var password;
+        var password = prompt('Ingresa tu contraseña.');
         while (password != '5467') {
-            if (password != undefined) {
-                console.log('Contraseña incorrecta! Ingresala nuevamente.');
-            };
-            let input = prompt('Ingresa tu contraseña.');
-            if (input == '5467') {
-                console.log('Contraseña correcta!');
-            };
-            password = input;
+            console.log('Contraseña incorrecta. Ingresala nuevamente.');
+            password = prompt('Contraseña incorrecta. Ingresala nuevamente.');
+        } {
+            console.log('Contraseña correcta!');
         };
     </script>
 </head>
