@@ -3,13 +3,12 @@
 
 <head>
     <script>
-        var number;
+        var number = Number(prompt('Ingresa un numero positivo'));
         do {
-            if (number != undefined && number > 0) {
-                console.log(`El numero ingresado (${number}) es positivo!`)
+            number = Number(prompt('Ingresa un numero positivo'));
+            if (number > 0) {
+                console.log(`El numero ingresado (${number}) es positivo!`);
             };
-            var numberInput = prompt('Ingresa un numero positivo');
-            number = Number(numberInput);
         } while (number > 0) {
             console.log('¡Te dije que ingresaras un numero positivo!');
         };
