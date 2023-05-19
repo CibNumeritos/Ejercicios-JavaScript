@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var numbers = [];
+        const random = (min, max) => { return Math.floor(Math.random() * (max - min) + min) };
+        for (let i = 0; i < random(10, 15); i++) {
+            numbers.push(random(1, 50));
+        };
+        var major = numbers[0], minor = numbers[0], numberSum = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            major = numbers[i] > major ? numbers[i] : major; // Math.max podría también ser usado para determinar el mayor pero el ejercicio perdería el sentido.  
+            minor = numbers[i] < minor ? numbers[i] : minor; // Math.max podría también ser usado para determinar el menor pero el ejercicio perdería el sentido.
+            numberSum += numbers[i];
+        };
+        const average = numberSum / numbers.length;
+        console.log(`El array de números es: ${numbers.join(', ')}.\nEl número mayor es igual a: ${major}, el número menor es igual a: ${minor} y por último la media es igual a ${average}.`);
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var numbers = [];
+        const random = (min, max) => { return Math.floor(Math.random() * (max - min) + min) };
+        for (let i = 0; i < random(10, 15); i++) {
+            numbers.push(random(1, 50));
+        };
+        var sumPairs = 0, sumUneven = 0;
+        for (let i = 0; i < numbers.length; i++) {
+            numbers[i] % 2 === 0 ? sumPairs += numbers[i] : sumUneven += numbers[i];
+        };
+        console.log(`El array de números es: ${numbers.join(', ')}.\nLa suma de números pares es igual a: ${sumPairs} y la suma de números impares es igual a: ${sumUneven}`);
+    </script>
+</head>
+
+</html>

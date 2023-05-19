@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function ola() {
+            var numbers = [];
+            let minimum = Number(prompt('Ingresa el valor minimo para el rango.')), maximum = Number(prompt('Ingresa el valor mayor para el rango.'));
+            const random = (min, max) => { return Math.floor(Math.random() * (max - min) + min) };
+            if (minimum >= maximum) {
+                alert('Rango invalido. Reiniciando.');
+                return location.reload();
+            };
+            for (let i = 0; i < random(10, 15); i++) {
+                numbers.push(random(minimum, maximum));
+            };
+            const newPosition = Number(prompt(`El array de números pseudoaleatoriamente generados es:\n${numbers.join(', ')}.\nIngresa una posición en la que quieres añadir un nuevo valor aleatorio.`));
+            numbers.splice((newPosition > numbers.length ? (newPosition - (numbers.length - 1)) : newPosition));
+            alert(`El array ahora es: ${numbers.join(', ')}`);
+        };
+        ola(); // Lo hice una función para poder recargar la página en caso de un rango "invalido", pues el uso de return es ilegal si no se trata de una función.
+    </script>
+</head>
+
+</html>
