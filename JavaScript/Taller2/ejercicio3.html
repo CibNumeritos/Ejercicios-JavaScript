@@ -9,9 +9,9 @@
             numbers.push(random(1, 50));
         };
         var sumPairs = 0, sumUneven = 0;
-        for (let i = 0; i < numbers.length; i++) {
-            numbers[i] % 2 === 0 ? sumPairs += numbers[i] : sumUneven += numbers[i];
-        };
+        numbers.forEach((n) => {
+            n % 2 === 0 ? sumPairs += n : sumUneven += n;
+        });
         console.log(`El array de números es: ${numbers.join(', ')}.\nLa suma de números pares es igual a: ${sumPairs} y la suma de números impares es igual a: ${sumUneven}`);
     </script>
 </head>

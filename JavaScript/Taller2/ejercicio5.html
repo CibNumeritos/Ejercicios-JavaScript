@@ -14,11 +14,15 @@
             for (let i = 0; i < random(10, 15); i++) {
                 numbers.push(random(minimum, maximum));
             };
-            const newPosition = Number(prompt(`El array de números pseudoaleatoriamente generados es:\n${numbers.join(', ')}.\nIngresa una posición en la que quieres añadir un nuevo valor aleatorio.`));
-            numbers.splice((newPosition > numbers.length ? (newPosition - (numbers.length - 1)) : newPosition));
+            const newPosition = Number(prompt(`El array de números aleatoriamente generados es:\n${numbers.join(', ')}.\nIngresa una posición en la que quieres añadir un nuevo valor aleatorio.`));
+            numbers.splice((newPosition > numbers.length ? (newPosition - (numbers.length - 1)) : newPosition), 0, random(minimum, maximum));
             alert(`El array ahora es: ${numbers.join(', ')}`);
         };
-        ola(); // Lo hice una función para poder recargar la página en caso de un rango "invalido", pues el uso de return es ilegal si no se trata de una función.
+        ola(); 
+        /* 
+        Lo hice una función para poder recargar la página en caso de un rango "invalido", pues el uso 
+        de return es ilegal si no se trata de una función.
+        */
     </script>
 </head>
 

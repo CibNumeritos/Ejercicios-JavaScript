@@ -9,9 +9,9 @@
             numbers.push(random(1, 50));
         };
         var pairs = [], uneven = [];
-        for (let i = 0; i < numbers.length; i++) {
-            numbers[i] % 2 === 0 ? pairs.push(numbers[i]) : uneven.push(numbers[i]);
-        };
+        numbers.forEach((n) => {
+            n % 2 === 0 ? pairs.push(n) : uneven.push(n);
+        })
         console.log(`El array de números aleatorios es: ${numbers.join(', ')}.\nEl array de números pares es: ${pairs.join(', ')}.\nEl array de números impares es: ${uneven.join(', ')}.`);
     </script>
 </head>
